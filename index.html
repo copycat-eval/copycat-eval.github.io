@@ -203,12 +203,12 @@
         <main>
 
             <section id="overview" class="scrollto">
-                <div class="row clearfix">
+                <div class="row clearfix no-padding-bottom">
                     <div class="col-1">
                         <div class="section-heading">
                             <h2 class="section-title">Overview</h2>
                         </div>
-                        <div class="col-1 secondary-color" style="padding: 10px; margin: 5px;">
+                        <div class="col-1 secondary-color no-padding-bottom" style="padding: 10px; margin: 5px;">
                             <p style="line-height: 20px; font-family:Georgia, 'Times New Roman', Times, serif">
                                 🤔 Why does user’s request for a generic “videogame plumber” lead image-generation
                                 models
@@ -222,92 +222,92 @@
 
                         </div>
                     </div>
-                    <!--Gallery-->
+                </div>
+                <!--Gallery-->
+                <aside id="gallery" class="row text-center scrollto clearfix no-padding-bottom no-padding-top"
+                    style="width:90%" data-featherlight-gallery data-featherlight-filter="a">
+                    <div class="col-2" style="margin-bottom: 0px;">
+                        <a href="images/intro/1.png" data-featherlight="image" class="col-3 wow fadeI"
+                            data-wow-delay="0.1s">
+                            <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
+                                v2.5<br>Propmt: "Mario"</p>
+                            <img src="images/intro/1.png" />
+                        </a>
 
-                    <aside id="gallery" class="row text-center scrollto clearfix" style="width:95%"
-                        data-featherlight-gallery data-featherlight-filter="a">
-                        <div class="col-2" style="margin-bottom: 0px;">
-                            <a href="images/intro/1.png" data-featherlight="image" class="col-3 wow fadeI"
-                                data-wow-delay="0.1s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
-                                    v2.5<br>Propmt: "Mario"</p>
-                                <img src="images/intro/1.png" />
-                            </a>
-
-                            <a href="images/intro/2.png" data-featherlight="image" class="col-3 wow fadeI"
-                                data-wow-delay="0.3s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
-                                    v2.5<br>Prompt: <b style="color: #604CC3;">"Videogame, Plumber"</b></p>
-                                <img src="images/intro/2.png" />
-                            </a>
-                            <a href="images/intro/3.png" data-featherlight="image" class="col-3 wow fadeI"
-                                data-wow-delay="0.5s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: DALL·E 3<br>Prompt:
-                                    <b style="color: #604CC3;">"Videogame, Plumber"</b></b>
-                                </p>
-                                <img src="images/intro/3.png" />
-                            </a>
-                        </div>
-                        <div class="col-2" style="margin-bottom: 0px;">
-                            <a href="images/intro/4.png" data-featherlight="image" class="col-3 wow fadeIn"
-                                data-wow-delay="0.1s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
-                                    v2.5<br>Propmt: "Batman"</p>
-                                <img src="images/intro/4.png" />
-                            </a>
-
-
-                            <a href="images/intro/5.png" data-featherlight="image" class="col-3 wow fadeIn"
-                                data-wow-delay="0.3s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
-                                    v2.5<br>Prompt: <b style="color: #604CC3;">"Gotham, Superhero"</b></p>
-                                <img src="images/intro/5.png" />
-                            </a>
-                            <a href="images/intro/6.png" data-featherlight="image" class="col-3 wow fadeI"
-                                data-wow-delay="0.5s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: DALL·E 3<br>Prompt:
-                                    <b style="color: #604CC3;">"Gotham, Superhero"</b></b>
-                                </p>
-                                <img src="images/intro/6.png" />
-                            </a>
-                        </div>
-
-                    </aside>
-                    <div class="row clearfix">
-                        <div class="col-1">
-                            <p> Despite implemented guardrails, models can still be triggered by names, keywords, or
-                                descriptions to generate copyrighted characters. This mismatch between generic prompt
-                                and specific output with potential copyright risks raises serious legal concern.
-                                Our project makes the following contributions:
-                            <ul>
-                                <li>First, we build <a href="#about">CopyCat</a>, an evaluation suite with a diverse set
-                                    of
-                                    popular copyrighted characters and a novel evaluation pipeline. We apply the
-                                    evaluation
-                                    suite on 5 image-generation model (<a
-                                        href="https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic">Playground
-                                        v2.5</a>, <a
-                                        href="https://huggingface.co/docs/diffusers/en/using-diffusers/sdxl">Stable
-                                        Diffusion XL</a>, <a href="https://pixart-alpha.github.io/">PixArt-α</a>, <a
-                                        href="https://github.com/deep-floyd/IF">DeepFloyd IF</a>, <a
-                                        href="https://openai.com/index/dall-e-3/">DALL·E 3</a>), and one video
-                                    generation
-                                    model (<a href="https://arxiv.org/abs/2303.08320">VideoFusion</a>).</li>
-                                <li>Second, we demonstrate ways to <a href="#method">semi-automatically identify
-                                        keywords or phrases
-                                        associated with a character</a> are enough to generate their image, without
-                                    mentioning their
-                                    name.</li>
-                                <li>Third, we find that existing <a href="#mitigation">mitigations are not fully
-                                        effective and suggest new strategies</a>.
-                                </li>
-                                <li>Last but not the least, we summarize some <a href="#takeaways">key takeaways for
-                                        users and model deployers</a>.
-                                </li>
-                            </ul>
+                        <a href="images/intro/2.png" data-featherlight="image" class="col-3 wow fadeI"
+                            data-wow-delay="0.3s">
+                            <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
+                                v2.5<br>Prompt: <b style="color: #604CC3;">"Videogame, Plumber"</b></p>
+                            <img src="images/intro/2.png" />
+                        </a>
+                        <a href="images/intro/3.png" data-featherlight="image" class="col-3 wow fadeI"
+                            data-wow-delay="0.5s">
+                            <p style="line-height: 1.2; color:black; font-size:12px">Model: DALL·E 3<br>Prompt:
+                                <b style="color: #604CC3;">"Videogame, Plumber"</b></b>
                             </p>
-                        </div>
+                            <img src="images/intro/3.png" />
+                        </a>
                     </div>
+                    <div class="col-2" style="margin-bottom: 0px;">
+                        <a href="images/intro/4.png" data-featherlight="image" class="col-3 wow fadeIn"
+                            data-wow-delay="0.1s">
+                            <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
+                                v2.5<br>Propmt: "Batman"</p>
+                            <img src="images/intro/4.png" />
+                        </a>
+
+
+                        <a href="images/intro/5.png" data-featherlight="image" class="col-3 wow fadeIn"
+                            data-wow-delay="0.3s">
+                            <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
+                                v2.5<br>Prompt: <b style="color: #604CC3;">"Gotham, Superhero"</b></p>
+                            <img src="images/intro/5.png" />
+                        </a>
+                        <a href="images/intro/6.png" data-featherlight="image" class="col-3 wow fadeI"
+                            data-wow-delay="0.5s">
+                            <p style="line-height: 1.2; color:black; font-size:12px">Model: DALL·E 3<br>Prompt:
+                                <b style="color: #604CC3;">"Gotham, Superhero"</b></b>
+                            </p>
+                            <img src="images/intro/6.png" />
+                        </a>
+                    </div>
+
+                </aside>
+                <div class="row clearfix no-padding-top no-padding-bottom">
+                    <div class="col-1">
+                        <p> Despite implemented guardrails, models can still be triggered by names, keywords, or
+                            descriptions to generate copyrighted characters. This mismatch between generic prompt
+                            and specific output with potential copyright risks raises serious legal concern.
+                            Our project makes the following contributions:
+                        <ul>
+                            <li>First, we build <a href="#about">CopyCat</a>, an evaluation suite with a diverse set
+                                of
+                                popular copyrighted characters and a novel evaluation pipeline. We apply the
+                                evaluation
+                                suite on 5 image-generation model (<a
+                                    href="https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic">Playground
+                                    v2.5</a>, <a
+                                    href="https://huggingface.co/docs/diffusers/en/using-diffusers/sdxl">Stable
+                                    Diffusion XL</a>, <a href="https://pixart-alpha.github.io/">PixArt-α</a>, <a
+                                    href="https://github.com/deep-floyd/IF">DeepFloyd IF</a>, <a
+                                    href="https://openai.com/index/dall-e-3/">DALL·E 3</a>), and one video
+                                generation
+                                model (<a href="https://arxiv.org/abs/2303.08320">VideoFusion</a>).</li>
+                            <li>Second, we demonstrate ways to <a href="#method">semi-automatically identify
+                                    keywords or phrases
+                                    associated with a character</a> are enough to generate their image, without
+                                mentioning their
+                                name.</li>
+                            <li>Third, we find that existing <a href="#mitigation">mitigations are not fully
+                                    effective and suggest new strategies</a>.
+                            </li>
+                            <li>Last but not the least, we summarize some <a href="#takeaways">key takeaways for
+                                    users and model deployers</a>.
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
 
             </section>
 
@@ -711,53 +711,57 @@
 
                 <div class="col-2">
                     <h4 style="text-transform: none; font-weight:600">BibTex</h3>
-                    <p style="font-size: 14px;">If you find our code and paper helpful, please consider citing our work</p>
-                    <div>
-                        <pre><span style="padding-right: 0.1px;">@misc{,</span></pre>
-                        <pre><span style="padding-right: 0.1px;"> &nbsp;  title={},</span></pre>
-                        <pre><span style="padding-right: 0.1px;"> &nbsp;  author={},</span></pre>
-                        <pre><span style="padding-right: 0.1px;"> &nbsp;  year={2024},</span></pre>
-                        <pre><span style="padding-right: 0.1px;"> &nbsp;  eprint={},</span></pre>
-                        <pre><span style="padding-right: 0.1px;"> &nbsp;  archivePrefix={arXiv},</span></pre>
-                        <pre><span style="padding-right: 0.1px;"> &nbsp;  primaryClass={cs.CL}</span></pre>
-                        <pre><span style="padding-right: 0.1px;">} </span>
+                        <p style="font-size: 14px;">If you find our code and paper helpful, please consider citing our
+                            work</p>
+                        <div>
+                            <pre><span style="padding-right: 0.1px;">@misc{,</span></pre>
+                            <pre><span style="padding-right: 0.1px;"> &nbsp;  title={},</span></pre>
+                            <pre><span style="padding-right: 0.1px;"> &nbsp;  author={},</span></pre>
+                            <pre><span style="padding-right: 0.1px;"> &nbsp;  year={2024},</span></pre>
+                            <pre><span style="padding-right: 0.1px;"> &nbsp;  eprint={},</span></pre>
+                            <pre><span style="padding-right: 0.1px;"> &nbsp;  archivePrefix={arXiv},</span></pre>
+                            <pre><span style="padding-right: 0.1px;"> &nbsp;  primaryClass={cs.CL}</span></pre>
+                            <pre><span style="padding-right: 0.1px;">} </span>
                         </pre>
-                    </div>
+                        </div>
                 </div>
 
                 <div class="col-40">
                     <h4 style="text-transform: none; font-weight:600">Acknowledgement</h3>
-                    <p style="font-size: 14px;">We thank Yanai Elazar for his insights on the WIMBD indices. We thank Colin Wang, Mengzhou Xia,
-                        Dan Friedman, Howard Yen, Jiayi Geng, Xindi Wu, Boyi Wei, Samyak Gupta, and Eric Wallace for
-                        providing helpful feedback. Luxi He is supported by the Gordon Y. S. Wu Fellowship. Yangsibo
-                        Huang is supported by the Wallace Memorial Fellowship. This research is partially supported by a
-                        Princeton SEAS Innovation Grant.
-                        Any opinions, findings, conclusions, or recommendations expressed in this material are those of
-                        the author(s) and do not necessarily reflect the views of the sponsors. </p>
+                        <p style="font-size: 14px;">We thank Yanai Elazar for his insights on the WIMBD indices. We
+                            thank Colin Wang, Mengzhou Xia,
+                            Dan Friedman, Howard Yen, Jiayi Geng, Xindi Wu, Boyi Wei, Samyak Gupta, and Eric Wallace for
+                            providing helpful feedback. Luxi He is supported by the Gordon Y. S. Wu Fellowship. Yangsibo
+                            Huang is supported by the Wallace Memorial Fellowship. This research is partially supported
+                            by a
+                            Princeton SEAS Innovation Grant.
+                            Any opinions, findings, conclusions, or recommendations expressed in this material are those
+                            of
+                            the author(s) and do not necessarily reflect the views of the sponsors. </p>
 
-                    </p>
+                        </p>
                 </div>
 
                 <!--Social Icons in Footer-->
                 <div class="col-10">
-                <ul class="col-1 social-icons">
-                    <li>
-                        <a target="_blank" title="Code" href="">
-                            <i class="fa fa-github fa-1x"></i><span>Code</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" title="Paper" href="">
-                            <i class="fa fa-paperclip fa-1x"></i><span>Paper</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" title="Twitter" href="">
-                            <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    <ul class="col-1 social-icons">
+                        <li>
+                            <a target="_blank" title="Code" href="">
+                                <i class="fa fa-github fa-1x"></i><span>Code</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" title="Paper" href="">
+                                <i class="fa fa-paperclip fa-1x"></i><span>Paper</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" title="Twitter" href="">
+                                <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <!--End of Social Icons in Footer-->
             </div>
         </footer>
