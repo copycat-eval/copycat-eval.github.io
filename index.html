@@ -593,13 +593,13 @@
                             const imageElement_p = document.getElementById('image_p');
                             const selectionElement_p = document.getElementById('selection_p');
 
-                            function updateDescription(selectedValue) {
-                                descriptionDiv_p.textContent = descriptions_p[selectedValue];
+                            function updateDescription_p(selectedValue_p) {
+                                descriptionDiv_p.textContent = descriptions_p[selectedValue_p];
                             }
 
-                            function generateImage(selectedValue) {
+                            function generateImage_p(selectedValue_p) {
                                 imageElement_p.style.opacity = 0; // Start fade out
-                                imageElement_p.src = images_p[selectedValue];
+                                imageElement_p.src = images_p[selectedValue_p];
                                 imageElement_p.style.display = 'block';
 
                             }
@@ -610,20 +610,20 @@
                             };
 
                             // Set default option and display content
-                            function setDefault() {
-                                const defaultValue = "A";
-                                selectionElement_p.value = defaultValue;
-                                updateDescription(defaultValue);
-                                generateImage(defaultValue);
+                            function setDefault_p() {
+                                const defaultValue_p = "E";
+                                selectionElement_p.value = defaultValue_p;
+                                updateDescription_p(defaultValue_p);
+                                generateImage_p(defaultValue_p);
                             }
 
-                            setDefault(); // Call the function to set default behavior
+                            setDefault_p(); // Call the function to set default behavior
 
                             selectionElement_p.addEventListener('change', function () {
-                                const selectedValue = this.value;
+                                const selectedValue_p = this.value;
                                 imageElement_p.style.display = 'none';
-                                updateDescription(selectedValue);
-                                generateImage(selectedValue);
+                                updateDescription_p(selectedValue_p);
+                                generateImage_p(selectedValue_p);
                             });
 
                         </script>
