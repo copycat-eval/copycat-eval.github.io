@@ -211,8 +211,10 @@
                         <p>
                             Why does user’s request for a generic “videogame plumber” lead to generation of Nintendo’s
                             Mario by image-generation model? Does user’s “gotham superhero” request necessarily mean
-                            they want an image of DC Comics’ Batman?
+                            they want an image of DC Comics’ Batman? 
+                            <!-- Let's change it to a different font/ layout? -->
                         </p>
+                        
                     </div>
                     <!--Gallery-->
                     <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
@@ -261,13 +263,14 @@
 
                     </aside>
                     <div class="col-1">
-                        <p>This mismatch between generic prompt and specific output with potential copyright risks
+                        <!-- <p>This mismatch between generic prompt and specific output with potential copyright risks
                             raises serious legal concern. Copyrighted characters should in theory not be output by
                             image-generation models. ChatGPT, for example, quietly rewrites your input prompt before
                             passing it to DALL·E. The rewriting process aims to discourage models from reproducing
                             copyrighted content. For example, your request for Mickey Mouse would either be refused or
-                            turned into some generic description of a cute cartoon mouse.</p>
-                        <p>Despite implemented guardrails, generating copyrighted characters can still be easily triggered by specific keywords or descriptions. There is already at least one lawsuit awarding damages for such generation (add footnote). Moreover, little research has empirically examined this issue, and prompt-rewriting as a mitigation is imperfect. Given this, we also explore runtime strategies to bolster copyright protection while simultaneously suppressing copyrighted-character generation and preserving user utility. Specifically, we make the following contributions:
+                            turned into some generic description of a cute cartoon mouse.</p> -->
+                        <p> Despite implemented guardrails, models can still be triggered by names, keywords, or descriptions to generate copyrighted characters. This mismatch between generic prompt and specific output with potential copyright risks raises serious legal concern. 
+                            Our project makes the following contributions:
                         <ul>
                             <li>First, we build <a href="#about">CopyCat</a>, an evaluation suite with a diverse set of
                                 popular copyrighted characters and a novel evaluation pipeline. We apply the evaluation
@@ -308,6 +311,7 @@
                             <p class="section-subtitle">We build CopyCat, an evaluation suite with a diverse set of
                                 popular copyrighted characters and a novel evaluation pipeline, to better ground our
                                 investigation and evaluation.</p>
+                            <!-- I think we can remove this block? -->
                         </div>
 
                     </div>
@@ -381,35 +385,30 @@
                         <div class="section-heading">
                             <h2 class="section-title">Indirect Anchors Generate Copyrighted Characters</h2>
                         </div>
-                        <p>We formalize two modes of prompt to copyrighted character generation. The first type
-                            prompts
-                            with character name directly (Character Name Anchoring). The second type uses keywords
-                            or
-                            descriptions without the character’s name (Indirect Anchoring). Indirect anchoring is
-                            especially important for both model deployers and model users: even a non-malicious user
+                        <p>We formalize two modes of copyrighted character generation: (1) Character Name Anchoring: 
+                            User prompt contains character name directly, and (2) Indirect Anchoring: User prompt contains
+                            keywords or descriptions without the character’s name. 
+                            Indirect anchoring is especially important for both model deployers and model users: even a non-malicious user
                             could accidentally copyrighted characters when using seemingly innocuous
-                            prompts,
-                            leading to potential legal liability for the model deployer as well as any unsuspecting
-                            user
-                            that tries to monetize the image.
+                            prompts, leading to potential legal liability for the model deployer as well as any unsuspecting
+                            user  that tries to monetize the image.
+                            <!-- For the sentence "Indirect anchoring is especially important..." should we maybe put it in a separate callout block? 
+                            If it's too long we can also take it out  -->
                         </p>
+
                         <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
                         <p>We introduce a generation + reranking pipeline to semi-automatically discover keywords or
-                            phrases that can be effective indirect anchors. To identify indirect anchors, we first
-                            use a language model to candidate keywords and descriptions that might evoke
-                            the likeliness of a copyrighted character. Then, we use the following 3 reranking
+                            phrases that can be effective indirect anchors. We first generate a candidate set of keywords, then we use the following 3 reranking
                             approaches to semi-automatically discover indirect anchors: </p>
                         <ul>
-                            <li>LM-Ranked: using greedy decoding to capture the inherent ranking of LMs. </li>
-                            <li>EmbeddingSim Ranked: rank by their embedding space distance to the copyrighted
+                            <li><b>LM-Ranked:</b> using greedy decoding to capture the inherent ranking of LMs. </li>
+                            <li><b>EmbeddingSim Ranked:</b> rank by their embedding space distance to the copyrighted
                                 character’s name. </li>
-                            <li>Co-Occurence Ranked: rank by their co-occurrence with the character’s name in
+                            <li><b>Co-Occurence Ranked:</b> rank by their co-occurrence with the character’s name in
                                 popular training corpora.</li>
                         </ul>
                         <p>
-                            The following graph demonstrate how many of the 50 copyrighted characters can be
-                            d using these curated sets of indirect anchors. We find that in general, ranking
-                            keywords based on their co-occurrence with the character’s name in the LAION corpus is
+                            We find that in general, ranking keywords based on their co-occurrence with the character’s name in the LAION corpus is
                             the most effective and could more characters than using a 60-word description
                             when only 20 keywords are used. In addition, we find that descriptions and identified
                             keywords also transfer to generating characters from DALL·E 3 and video models.
@@ -533,14 +532,11 @@
 
                     <p>We find that applying prompt-rewriting, an important technique for copyright protection adopted
                         by model deployers, alone can only reduce the number of generated characters by half compared to
-                        no intervention. Many of the failed rewritten prompts also contain indirect anchoring keywords
-                        we identified. Instead, combining this strategy with negative prompting (i.e., steering models
+                        no intervention. Instead, combining this strategy with negative prompting (i.e., steering models
                         away from concepts like “red hat” during inference)—where a model proactively steers away from
-                        inferred character at generation time—significantly boost mitigation effectiveness. In Table 1
-                        below, we show that this combination reduces over 80% of characters compared to no mitigation.
-                        We also show in the that a combination of mitigation strategies is able to strike a balance
-                        between enhancing elimination of similar output and adhering to user intent. We also include some visual
-                        examples to show the effect of applying the enhanced run-time interventions.</p>
+                        inferred character at generation time—significantly boost mitigation effectiveness. The combination 
+                        can reduce up to >80% of characters compared to no mitigation, while still reasonably adhering to 
+                        user intent. </p>
 
                     <div class='col-1' class='text-center'>
                         <img src="images/defenses/1.png" style="max-width: 80%" class="img-center" />
