@@ -305,6 +305,10 @@ section {
     width: 61.8%;
 }
 
+.col-40 {
+    width: 40%;
+}
+
 .col-22 {
     width: 22%;
 }
