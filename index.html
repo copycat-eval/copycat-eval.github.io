@@ -207,90 +207,107 @@
                     <div class="col-1">
                         <div class="section-heading">
                             <h2 class="section-title">Overview</h2>
-                            <div style="background-color: rgb(237, 237, 237); padding: 10px; margin: 5px;">
-                                <p>
-                                    🤔<i> Why does user’s request for a generic “videogame plumber” lead image-generation models to produce Nintendo’s
-                                        Mario by ? Does user’s “gotham superhero” request necessarily mean
-                                        they want an image of DC Comics’ Batman? </i>
-                                </p>
-                            </div>
+                        </div>
+                        <div class="col-1 secondary-color" style="padding: 10px; margin: 5px;">
+                            <p style="line-height: 20px; font-family:Georgia, 'Times New Roman', Times, serif">
+                                🤔 Why does user’s request for a generic “videogame plumber” lead image-generation
+                                models
+                                such as <a
+                                    href="https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic">Playground
+                                    v2.5</a> and <a href="https://openai.com/index/dall-e-3/">DALL·E 3</a> to
+                                produce Nintendo’s Mario? Does user’s “gotham superhero” request necessarily mean they
+                                want
+                                an image of DC Comics’ Batman?
+                            </p>
+
+                        </div>
+                    </div>
                     <!--Gallery-->
-                    <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
-                        data-featherlight-filter="a">
+
+                    <aside id="gallery" class="row text-center scrollto clearfix" style="width:95%"
+                        data-featherlight-gallery data-featherlight-filter="a">
                         <div class="col-2" style="margin-bottom: 0px;">
                             <a href="images/intro/1.png" data-featherlight="image" class="col-3 wow fadeI"
                                 data-wow-delay="0.1s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground v2.5<br>Propmt: "Mario"</p>
+                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
+                                    v2.5<br>Propmt: "Mario"</p>
                                 <img src="images/intro/1.png" />
                             </a>
 
                             <a href="images/intro/2.png" data-featherlight="image" class="col-3 wow fadeI"
                                 data-wow-delay="0.3s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground v2.5<br>Prompt: <b
-                                        style="color: #604CC3;">"Videogame, Plumber"</b></p>
+                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
+                                    v2.5<br>Prompt: <b style="color: #604CC3;">"Videogame, Plumber"</b></p>
                                 <img src="images/intro/2.png" />
                             </a>
                             <a href="images/intro/3.png" data-featherlight="image" class="col-3 wow fadeI"
                                 data-wow-delay="0.5s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: DALL·E 3<br>Prompt: <b
-                                        style="color: #604CC3;">"Videogame, Plumber"</b></b></p>
+                                <p style="line-height: 1.2; color:black; font-size:12px">Model: DALL·E 3<br>Prompt:
+                                    <b style="color: #604CC3;">"Videogame, Plumber"</b></b>
+                                </p>
                                 <img src="images/intro/3.png" />
                             </a>
                         </div>
                         <div class="col-2" style="margin-bottom: 0px;">
                             <a href="images/intro/4.png" data-featherlight="image" class="col-3 wow fadeIn"
                                 data-wow-delay="0.1s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground v2.5<br>Propmt: "Batman"</p>
+                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
+                                    v2.5<br>Propmt: "Batman"</p>
                                 <img src="images/intro/4.png" />
                             </a>
 
 
                             <a href="images/intro/5.png" data-featherlight="image" class="col-3 wow fadeIn"
                                 data-wow-delay="0.3s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground v2.5<br>Prompt: <b
-                                        style="color: #604CC3;">"Gotham, Superhero"</b></p>
+                                <p style="line-height: 1.2; color:black; font-size:12px">Model: Playground
+                                    v2.5<br>Prompt: <b style="color: #604CC3;">"Gotham, Superhero"</b></p>
                                 <img src="images/intro/5.png" />
                             </a>
                             <a href="images/intro/6.png" data-featherlight="image" class="col-3 wow fadeI"
                                 data-wow-delay="0.5s">
-                                <p style="line-height: 1.2; color:black; font-size:12px">Model: DALL·E 3<br>Prompt: <b
-                                        style="color: #604CC3;">"Gotham, Superhero"</b></b></p>
+                                <p style="line-height: 1.2; color:black; font-size:12px">Model: DALL·E 3<br>Prompt:
+                                    <b style="color: #604CC3;">"Gotham, Superhero"</b></b>
+                                </p>
                                 <img src="images/intro/6.png" />
                             </a>
                         </div>
 
                     </aside>
-                    <div class="col-1">
-                        <!-- <p>This mismatch between generic prompt and specific output with potential copyright risks
-                            raises serious legal concern. Copyrighted characters should in theory not be output by
-                            image-generation models. ChatGPT, for example, quietly rewrites your input prompt before
-                            passing it to DALL·E. The rewriting process aims to discourage models from reproducing
-                            copyrighted content. For example, your request for Mickey Mouse would either be refused or
-                            turned into some generic description of a cute cartoon mouse.</p> -->
-                        <p> Despite implemented guardrails, models can still be triggered by names, keywords, or descriptions to generate copyrighted characters. This mismatch between generic prompt and specific output with potential copyright risks raises serious legal concern. 
-                            Our project makes the following contributions:
-                        <ul>
-                            <li>First, we build <a href="#about">CopyCat</a>, an evaluation suite with a diverse set of
-                                popular copyrighted characters and a novel evaluation pipeline. We apply the evaluation
-                                suite on 5 image-generation model (<a
-                                    href="https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic">Playground
-                                    v2.5</a>, <a
-                                    href="https://huggingface.co/docs/diffusers/en/using-diffusers/sdxl">Stable
-                                    Diffusion XL</a>, <a href="https://pixart-alpha.github.io/">PixArt-α</a>, <a
-                                    href="https://github.com/deep-floyd/IF">DeepFloyd IF</a>, <a
-                                    href="https://openai.com/index/dall-e-3/">DALL·E 3</a>), and one video generation
-                                model (<a href="https://arxiv.org/abs/2303.08320">VideoFusion</a>).</li>
-                            <li>Second, we demonstrate ways to <a href="#method">semi-automatically identify keywords or phrases
-                                associated with a character</a> are enough to generate their image, without mentioning their
-                                name.</li>
-                            <li>Third, we find that existing <a href="#mitigation">mitigations are not fully effective and suggest new strategies</a>.
-                            </li>
-                            <li>Last but not the least, we summarize some <a href="#takeaways">key takeaways for users and model deployers</a>.
-                            </li>
-                        </ul>
-                        </p>
+                    <div class="row clearfix">
+                        <div class="col-1">
+                            <p> Despite implemented guardrails, models can still be triggered by names, keywords, or
+                                descriptions to generate copyrighted characters. This mismatch between generic prompt
+                                and specific output with potential copyright risks raises serious legal concern.
+                                Our project makes the following contributions:
+                            <ul>
+                                <li>First, we build <a href="#about">CopyCat</a>, an evaluation suite with a diverse set
+                                    of
+                                    popular copyrighted characters and a novel evaluation pipeline. We apply the
+                                    evaluation
+                                    suite on 5 image-generation model (<a
+                                        href="https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic">Playground
+                                        v2.5</a>, <a
+                                        href="https://huggingface.co/docs/diffusers/en/using-diffusers/sdxl">Stable
+                                        Diffusion XL</a>, <a href="https://pixart-alpha.github.io/">PixArt-α</a>, <a
+                                        href="https://github.com/deep-floyd/IF">DeepFloyd IF</a>, <a
+                                        href="https://openai.com/index/dall-e-3/">DALL·E 3</a>), and one video
+                                    generation
+                                    model (<a href="https://arxiv.org/abs/2303.08320">VideoFusion</a>).</li>
+                                <li>Second, we demonstrate ways to <a href="#method">semi-automatically identify
+                                        keywords or phrases
+                                        associated with a character</a> are enough to generate their image, without
+                                    mentioning their
+                                    name.</li>
+                                <li>Third, we find that existing <a href="#mitigation">mitigations are not fully
+                                        effective and suggest new strategies</a>.
+                                </li>
+                                <li>Last but not the least, we summarize some <a href="#takeaways">key takeaways for
+                                        users and model deployers</a>.
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
                     </div>
-                </div>
 
             </section>
 
@@ -306,9 +323,9 @@
                             <h2 class="section-title">CopyCat <br>Evaluation Suite
                                 <img src="images/logo.png" id="banner-logo" style="max-width: 40%;" />
                             </h2>
-                            <!-- <p class="section-subtitle">We build CopyCat, an evaluation suite with a diverse set of
+                            <p class="section-subtitle">We build CopyCat, an evaluation suite with a diverse set of
                                 popular copyrighted characters and a novel evaluation pipeline, to better ground our
-                                investigation and evaluation.</p> -->
+                                investigation and evaluation.</p>
                             <!-- I think we can remove this block? -->
                         </div>
 
@@ -316,48 +333,48 @@
 
 
 
-                        <!--Icon Block-->
-                        <div class="col-22 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                            <!--Icon-->
-                            <div class="icon">
-                                <i class="fa fa-copyright fa-2x"></i>
-                            </div>
-                            <!--Icon Block Description-->
-                            <div class="icon-block-description">
-                                <h4>1. Copyrighted Characters</h4>
-                                <p>CopyCat includes a dataset with <b style='color:#604CC3'>50 diverse popular
-                                        copyrighted characters</b> from 18
-                                    studios, both US and international.</p>
-                            </div>
+                    <!--Icon Block-->
+                    <div class="col-22 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <i class="fa fa-copyright fa-2x"></i>
                         </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>1. Copyrighted Characters</h4>
+                            <p>CopyCat includes a dataset with <b style='color:#604CC3'>50 diverse popular
+                                    copyrighted characters</b> from 18
+                                studios, both US and international.</p>
+                        </div>
+                    </div>
 
-                        <div class="col-22 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
-                            <!--Icon-->
-                            <div class="icon">
-                                <i class="fa fa-legal fa-2x"></i>
-                            </div>
-                            <!--Icon Block Description-->
-                            <div class="icon-block-description">
-                                <h4>2. Similarity evaluator</h4>
-                                <p>CopyCat uses a GPT4-based evaluator to detect similarity with copyrighted character
-                                    in generated images, resulting in a <b style='color:#604CC3'>DETECT</b> score.</p>
-                            </div>
+                    <div class="col-22 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <i class="fa fa-legal fa-2x"></i>
                         </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>2. Similarity evaluator</h4>
+                            <p>CopyCat uses a GPT4-based evaluator to detect similarity with copyrighted character
+                                in generated images, resulting in a <b style='color:#604CC3'>DETECT</b> score.</p>
+                        </div>
+                    </div>
 
-                        <div class="col-22 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
-                            <!--Icon-->
-                            <div class="icon">
-                                <i class="fa fa-user fa-2x"></i>
-                            </div>
-                            <!--Icon Block Description-->
-                            <div class="icon-block-description">
-                                <h4>3. Consistency evaluator</h4>
-                                <p>CopyCat also measures whether the generation is consistent with the user's intent
-                                    (i.e., utility), using a <b style='color:#604CC3'>CONS</b> score indicating if the
-                                    main characteristic (e.g., “cartoon
-                                    mouse” for Mickey Mouse) is present in the generation. </p>
-                            </div>
+                    <div class="col-22 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <i class="fa fa-user fa-2x"></i>
                         </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>3. Consistency evaluator</h4>
+                            <p>CopyCat also measures whether the generation is consistent with the user's intent
+                                (i.e., utility), using a <b style='color:#604CC3'>CONS</b> score indicating if the
+                                main characteristic (e.g., “cartoon
+                                mouse” for Mickey Mouse) is present in the generation. </p>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -383,20 +400,25 @@
                         <div class="section-heading">
                             <h2 class="section-title">Indirect Anchors Generate Copyrighted Characters</h2>
                         </div>
-                        <p>We formalize two modes of copyrighted character generation: (1) <b>Character Name Anchoring: </b>
-                            User prompt contains character name directly, and (2) <b>Indirect Anchoring:</b> User prompt contains
-                            keywords or descriptions without the character’s name. 
-                            <b style='color:#604CC3'>Indirect anchoring is especially important for both model deployers and model users: even a non-malicious user
+                        <p>We formalize two modes of copyrighted character generation: (1) <b>Character Name Anchoring:
+                            </b>
+                            User prompt contains character name directly, and (2) <b>Indirect Anchoring:</b> User prompt
+                            contains
+                            keywords or descriptions without the character’s name.
+                            <b style='color:#604CC3'>Indirect anchoring is especially important for both model deployers
+                                and model users: even a non-malicious user
                                 could accidentally copyrighted characters when using seemingly innocuous
-                                prompts, leading to potential legal liability for the model deployer as well as any unsuspecting
-                                user  that tries to monetize the image.</b>
+                                prompts, leading to potential legal liability for the model deployer as well as any
+                                unsuspecting
+                                user that tries to monetize the image.</b>
                             <!-- For the sentence "Indirect anchoring is especially important..." should we maybe put it in a separate callout block? 
                             If it's too long we can also take it out  -->
                         </p>
 
                         <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
                         <p>We introduce a generation + reranking pipeline to semi-automatically discover keywords or
-                            phrases that can be effective indirect anchors. We first generate a candidate set of keywords, then we use the following 3 reranking
+                            phrases that can be effective indirect anchors. We first generate a candidate set of
+                            keywords, then we use the following 3 reranking
                             approaches to semi-automatically discover indirect anchors: </p>
                         <ul>
                             <li><b>LM-Ranked:</b> using greedy decoding to capture the inherent ranking of LMs. </li>
@@ -406,7 +428,8 @@
                                 popular training corpora.</li>
                         </ul>
                         <p>
-                            We find that in general, ranking keywords based on their co-occurrence with the character’s name in the LAION corpus is
+                            We find that in general, ranking keywords based on their co-occurrence with the character’s
+                            name in the LAION corpus is
                             the most effective and could more characters than using a 60-word description
                             when only 20 keywords are used. In addition, we find that descriptions and identified
                             keywords also transfer to generating characters from DALL·E 3 and video models.
@@ -420,7 +443,7 @@
 
 
                         <div class="pricing-block col-1 wow fadeInUp secondary-color" data-wow-delay="0.2s"
-                        style="border-radius: 1em; transform: scale(0.9);">
+                            style="border-radius: 1em; transform: scale(0.9);">
                             <div class='col-1'>
                                 <label for="selection" style="color: #604CC3; font-size: 16px; font-weight:600">Below
                                     are some examples generated by DALL·E 3. Choose a character here:</label>
@@ -441,7 +464,7 @@
                                 <i><q id="description"
                                         style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px; line-height: 25px"></q></i>
                             </div>
-                            <div class="col-5">
+                            <div class="col-5 text-center">
                                 <span style="color:#604CC3; font-weight: 600">Generated image</span>
                                 <img id="image" src="" style="display: none; border-radius: 1em" />
                             </div>
@@ -532,15 +555,18 @@
 
                     <p>We find that applying prompt-rewriting, an important technique for copyright protection adopted
                         by model deployers, alone can only reduce the number of generated characters by half compared to
-                        no intervention. Instead, combining this strategy with negative prompting- where a model proactively steers away from
-                        inferred character at generation time— significantly boost mitigation effectiveness. The combination 
-                        can reduce up to >80% of characters compared to no mitigation, while still reasonably adhering to 
+                        no intervention. Instead, combining this strategy with negative prompting- where a model
+                        proactively steers away from
+                        inferred character at generation time— significantly boost mitigation effectiveness. The
+                        combination
+                        can reduce up to >80% of characters compared to no mitigation, while still reasonably adhering
+                        to
                         user intent. </p>
 
                     <div class='col-1' class='text-center'>
-                        <img src="images/defenses/1.png" class="img-center"  style="width:70%; height:70%;" />
+                        <img src="images/defenses/1.png" class="img-center" style="width:80%; height:70%;" />
                         <br>
-                        <img src="images/defenses/2.png" class="img-center"  style="width:70%; height:70%;" />
+                        <img src="images/defenses/2.png" class="img-center" style="width:80%; height:70%;" />
                     </div>
                     <!--User Testimonial-->
                     <!-- <blockquote class="col-3 testimonial classic">
@@ -651,7 +677,8 @@
                         <div class="pricing-block-content">
                             <h3>Users</h3>
                             <p> Users should raise awareness of Indirect Anchoring, as these prompts can result
-                                in potential copyright issues and liability even when not intending to generate copyrighted
+                                in potential copyright issues and liability even when not intending to generate
+                                copyrighted
                                 characters.
                             </p>
                         </div>
@@ -660,7 +687,10 @@
                     <div class="pricing-block col-2 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="pricing-block-content">
                             <h3>Model deployers</h3>
-                            <p>For model deployers who adopt mitigation strategies to prevent the generation of copyrighted characters, it's also important to note that Indirect Anchoring may bypass guardrails that rely on direct name detection. We also recommend investing in techniques beyond prompt rewriting such as combining it with negative prompts.
+                            <p>For model deployers who adopt mitigation strategies to prevent the generation of
+                                copyrighted characters, it's also important to note that Indirect Anchoring may bypass
+                                guardrails that rely on direct name detection. We also recommend investing in techniques
+                                beyond prompt rewriting such as combining it with negative prompts.
                             </p>
                         </div>
                     </div>
@@ -697,9 +727,14 @@
 
                 <div class="pricing-block col-2">
                     <h3 style="text-transform: none;">Acknowledgement</h3>
-                    <p>We thank Yanai Elazar for his insights on the WIMBD indices. We thank Colin Wang, Mengzhou Xia, Dan Friedman, Howard Yen, Jiayi Geng, Xindi Wu, Boyi Wei, Samyak Gupta, and Eric Wallace for providing helpful feedback. Luxi He is supported by the Gordon Y. S. Wu Fellowship. Yangsibo Huang is supported by the Wallace Memorial Fellowship. This research is partially supported by a Princeton SEAS Innovation Grant. 
-                        Any opinions, findings, conclusions, or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the sponsors.  </p>
-     
+                    <p>We thank Yanai Elazar for his insights on the WIMBD indices. We thank Colin Wang, Mengzhou Xia,
+                        Dan Friedman, Howard Yen, Jiayi Geng, Xindi Wu, Boyi Wei, Samyak Gupta, and Eric Wallace for
+                        providing helpful feedback. Luxi He is supported by the Gordon Y. S. Wu Fellowship. Yangsibo
+                        Huang is supported by the Wallace Memorial Fellowship. This research is partially supported by a
+                        Princeton SEAS Innovation Grant.
+                        Any opinions, findings, conclusions, or recommendations expressed in this material are those of
+                        the author(s) and do not necessarily reflect the views of the sponsors. </p>
+
                     </p>
                 </div>
 
