@@ -207,15 +207,13 @@
                     <div class="col-1">
                         <div class="section-heading">
                             <h2 class="section-title">Overview</h2>
-                        </div>
-                        <p>
-                            Why does user’s request for a generic “videogame plumber” lead to generation of Nintendo’s
-                            Mario by image-generation model? Does user’s “gotham superhero” request necessarily mean
-                            they want an image of DC Comics’ Batman? 
-                            <!-- Let's change it to a different font/ layout? -->
-                        </p>
-                        
-                    </div>
+                            <div style="background-color: rgb(237, 237, 237); padding: 10px; margin: 5px;">
+                                <p>
+                                    🤔<i> Why does user’s request for a generic “videogame plumber” lead image-generation models to produce Nintendo’s
+                                        Mario by ? Does user’s “gotham superhero” request necessarily mean
+                                        they want an image of DC Comics’ Batman? </i>
+                                </p>
+                            </div>
                     <!--Gallery-->
                     <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
                         data-featherlight-filter="a">
@@ -308,9 +306,9 @@
                             <h2 class="section-title">CopyCat <br>Evaluation Suite
                                 <img src="images/logo.png" id="banner-logo" style="max-width: 40%;" />
                             </h2>
-                            <p class="section-subtitle">We build CopyCat, an evaluation suite with a diverse set of
+                            <!-- <p class="section-subtitle">We build CopyCat, an evaluation suite with a diverse set of
                                 popular copyrighted characters and a novel evaluation pipeline, to better ground our
-                                investigation and evaluation.</p>
+                                investigation and evaluation.</p> -->
                             <!-- I think we can remove this block? -->
                         </div>
 
@@ -388,10 +386,10 @@
                         <p>We formalize two modes of copyrighted character generation: (1) <b>Character Name Anchoring: </b>
                             User prompt contains character name directly, and (2) <b>Indirect Anchoring:</b> User prompt contains
                             keywords or descriptions without the character’s name. 
-                            Indirect anchoring is especially important for both model deployers and model users: even a non-malicious user
-                            could accidentally copyrighted characters when using seemingly innocuous
-                            prompts, leading to potential legal liability for the model deployer as well as any unsuspecting
-                            user  that tries to monetize the image.
+                            <b style='color:#604CC3'>Indirect anchoring is especially important for both model deployers and model users: even a non-malicious user
+                                could accidentally copyrighted characters when using seemingly innocuous
+                                prompts, leading to potential legal liability for the model deployer as well as any unsuspecting
+                                user  that tries to monetize the image.</b>
                             <!-- For the sentence "Indirect anchoring is especially important..." should we maybe put it in a separate callout block? 
                             If it's too long we can also take it out  -->
                         </p>
@@ -413,16 +411,18 @@
                             when only 20 keywords are used. In addition, we find that descriptions and identified
                             keywords also transfer to generating characters from DALL·E 3 and video models.
                         </p>
-                        <img src="images/exp/anchor.png" />
+                        <div style="display: flex; justify-content: center;">
+                            <img src="images/exp/anchor.png" style="width:80%; height:80%;" />
+                        </div>
 
                         <!-- <p>Below are some examples d by DALL·E 3 (click images to see the prompts):</p> -->
 
 
 
                         <div class="pricing-block col-1 wow fadeInUp secondary-color" data-wow-delay="0.2s"
-                            style="border-radius: 1em;">
+                        style="border-radius: 1em; transform: scale(0.9);">
                             <div class='col-1'>
-                                <label for="selection" style="color: #604CC3; font-size: 18px; font-weight:600">Below
+                                <label for="selection" style="color: #604CC3; font-size: 16px; font-weight:600">Below
                                     are some examples generated by DALL·E 3. Choose a character here:</label>
                                 <select id="selection" class="select">
                                     <!-- <option value="">Select...</option> -->
@@ -436,7 +436,7 @@
                                 </select>
                             </div>
                             <div class="col-70">
-                                <span style="color:#604CC3; font-weight: 600">Prompt: </span>
+                                <span style="color:#604CC3; font-size: 16px; font-weight: 600">Prompt: </span>
                                 <br>
                                 <i><q id="description"
                                         style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px; line-height: 25px"></q></i>
@@ -532,16 +532,15 @@
 
                     <p>We find that applying prompt-rewriting, an important technique for copyright protection adopted
                         by model deployers, alone can only reduce the number of generated characters by half compared to
-                        no intervention. Instead, combining this strategy with negative prompting (i.e., steering models
-                        away from concepts like “red hat” during inference)—where a model proactively steers away from
-                        inferred character at generation time—significantly boost mitigation effectiveness. The combination 
+                        no intervention. Instead, combining this strategy with negative prompting- where a model proactively steers away from
+                        inferred character at generation time— significantly boost mitigation effectiveness. The combination 
                         can reduce up to >80% of characters compared to no mitigation, while still reasonably adhering to 
                         user intent. </p>
 
                     <div class='col-1' class='text-center'>
-                        <img src="images/defenses/1.png" style="max-width: 80%" class="img-center" />
-
-                        <img src="images/defenses/2.png" style="max-width: 80%;" class="img-center" />
+                        <img src="images/defenses/1.png" class="img-center"  style="width:70%; height:70%;" />
+                        <br>
+                        <img src="images/defenses/2.png" class="img-center"  style="width:70%; height:70%;" />
                     </div>
                     <!--User Testimonial-->
                     <!-- <blockquote class="col-3 testimonial classic">
@@ -698,9 +697,9 @@
 
                 <div class="pricing-block col-2">
                     <h3 style="text-transform: none;">Acknowledgement</h3>
-                    <p>We thank Yanai Elazar for his insights on the WIMBD indices. We thank Colin Wang, Mengzhou Xia, Dan Friedman, Xindi Wu, Boyi Wei, Samyak Gupta, and Eric Wallace for providing helpful feedback. </p>
-                    
-                    <p>Luxi He is supported by the Gordon Y. S. Wu Fellowship. Yangsibo Huang is supported by the Wallace Memorial Fellowship. Any opinions, findings, conclusions, or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the sponsors.
+                    <p>We thank Yanai Elazar for his insights on the WIMBD indices. We thank Colin Wang, Mengzhou Xia, Dan Friedman, Howard Yen, Jiayi Geng, Xindi Wu, Boyi Wei, Samyak Gupta, and Eric Wallace for providing helpful feedback. Luxi He is supported by the Gordon Y. S. Wu Fellowship. Yangsibo Huang is supported by the Wallace Memorial Fellowship. This research is partially supported by a Princeton SEAS Innovation Grant. 
+                        Any opinions, findings, conclusions, or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the sponsors.  </p>
+     
                     </p>
                 </div>
 
