@@ -260,6 +260,10 @@ section {
     width: 20%;
 }
 
+.col-55 {
+    width: 55%;
+}
+
 .col-6 {
     width: 16.6666666667%;
 }
